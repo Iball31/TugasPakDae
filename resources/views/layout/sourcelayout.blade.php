@@ -14,6 +14,10 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+
+    <!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+
     <!-- Custom styles for this template-->
     <link href="{{asset('assets/css/sb-admin-2.min.css')}}" rel="stylesheet">
 </head>
@@ -324,3 +328,24 @@
     <!-- Page level custom scripts -->
     <script src="{{asset('assets/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('assets/js/demo/chart-pie-demo.js')}}"></script>
+
+    <!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+$(document).ready(function () {
+    $("#dataTable").DataTable({
+        "paging": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "lengthMenu": [10, 25, 50],
+        "language": {
+            "search": "Cari:",
+            "lengthMenu": "Tampilkan _MENU_ data",
+            "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data"
+        }
+    });
+});
+</script>
