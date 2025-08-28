@@ -65,7 +65,11 @@
                             @if($siswa->photo)
                                 <div class="mt-2">
                                     <label class="form-label d-block">Foto Saat Ini:</label>
-                                    <img src="{{ asset('uploads/siswa/' . $siswa->photo) }}" alt="Foto Siswa" width="100" height="100" style="object-fit: cover; border-radius: 5px;">
+                                    <img src="{{ asset('uploads/siswa/' . $siswa->photo) }}" 
+                                    alt="Foto" 
+                                    width="80" 
+                                    height="80" 
+                                    style="object-fit: cover; border-radius: 50%;">
                                 </div>
                             @endif
                         </div>

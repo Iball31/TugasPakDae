@@ -55,7 +55,12 @@
                 <td>{{ $siswa->alamat ?? '-' }}</td>
                 <td>
                     @if($siswa->photo)
-                        <img src="{{ asset('uploads/siswa/' . $siswa->photo) }}" alt="Foto" width="60" height="60" style="object-fit: cover; border-radius: 5px;">
+                        <img src="{{ asset('uploads/siswa/' . $siswa->photo) }}" 
+     alt="Foto" 
+     width="80" 
+     height="80" 
+     style="object-fit: cover; border-radius: 50%;">
+
                     @else
                         <span class="text-muted">Tidak ada foto</span>
                     @endif

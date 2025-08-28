@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SiswaController;
+
+
 Route::get('/', function () {
     return view('index');
 });
@@ -45,3 +47,6 @@ Route::prefix('users')->group(function () {
     Route::get('/index', [UsersController::class, 'index']);
     Route::get('/create', [UsersController::class, 'create']);
 });
+
+
+
